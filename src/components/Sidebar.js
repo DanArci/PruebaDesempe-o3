@@ -1,13 +1,22 @@
-import { removeSession } from "@/utils";
+import { removeSession, getSession } from "@/utils";
 import { navigateTo } from "@/router/router";
 
 export default function Sidebar() {
+  const user = getSession();
+
   setTimeout(() => {
-    document
-      .querySelector("#logoutBtn")
-      ?.addEventListener("click", () => {
-        navigateTo("/");
+    const logoutBtn = document.querySelector("#logoutBtn");
+    logoutBtn?.addEventListener("click", () => {
+      removeSession();
+      navigateTo("/");
+    });
+
+    document.querySelectorAll("[data-link]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        navigateTo(link.getAttribute("href"));
       });
+    });
   });
 
   return `
@@ -23,6 +32,12 @@ export default function Sidebar() {
         <a href="/home" class="px-3 py-1 bg-gray-500 rounded-xl" data-link>
           Home
         </a>
+
+        ${
+          user?.role === "admin"
+            ? `<a href="/admin" class="px-3 py-1 bg-blue-600 rounded-xl" data-link>Reservas admin</a>`
+            : ""
+        }
 
         <button
           id="logoutBtn"

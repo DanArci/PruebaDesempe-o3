@@ -128,7 +128,7 @@ export default function homeView() {
             >
               ${
                 user?.role === "admin"
-                  ? "Mostrando todas las reservas"
+                  ? "Usa Gestionar Reservas para ver y editar"
                   : "Mostrando únicamente tus reservas"
               }
             </span>

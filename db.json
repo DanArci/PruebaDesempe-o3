@@ -1,21 +1,21 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "admin@test.com",
       "password": "A123456",
       "role": "admin",
       "name": "Administrador"
     },
     {
-      "id": 2,
+      "id": "2",
       "email": "user@test.com",
       "password": "A123456",
       "role": "user",
       "name": "Usuario"
     },
     {
-      "id": 3,
+      "id": "3",
       "email": "user2@test.com",
       "password": "A123456",
       "role": "user",
@@ -28,10 +28,10 @@
       "userId": "2",
       "workspace": "Sala A",
       "date": "2026-01-15",
-      "startHour": "08:00",
-      "endHour": "09:00",
+      "startHour": "01:00",
+      "endHour": "09:03",
       "reason": "Sprint Planning",
-      "status": "pending"
+      "status": "approved"
     },
     {
       "id": "2",
@@ -43,5 +43,6 @@
       "reason": "Daily Meeting",
       "status": "approved"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
