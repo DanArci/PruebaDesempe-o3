@@ -1,7 +1,3 @@
-# Project Canvas
-
-## Nombre sugerido del proyecto
-
 **Workspace Reservation System SPA**
 
 ## General Description
