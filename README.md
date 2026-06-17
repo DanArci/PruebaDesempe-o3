@@ -1,4 +1,4 @@
-**Workspace Reservation System SPA**
+#Workspace Reservation System SPA
 
 ## General Description
 
